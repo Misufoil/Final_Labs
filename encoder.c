@@ -6,15 +6,15 @@
 
 int main() {
     char method[6];
-    printf("Enter method (Caesar or XOR): "); 
+    printf("Enter the method (Caesar or XOR): ");
     scanf("%s", method);
     char str[200];
-    printf("Enter text: ");
+    printf("Enter the text: ");
     scanf("%s", str);
 
     if (strcmp(method, "Caesar") == 0) {
 	    int key;
-	    printf("Enter key: ");
+	    printf("Enter the key: ");
 	    scanf("%d", &key);
         muttableEndStrip(str);
         mutableToLower(str);
@@ -23,14 +23,14 @@ int main() {
     }
     if (strcmp(method, "XOR") == 0) {
 	    char pass[200];
-	    printf("Enter pass: ");
+	    printf("Enter the pass: ");
        	scanf("%s", pass);
         muttableEndStrip(str);
         mutableToLower(str);
         muttableXorCoder(str, pass);
         printf("%s\n", str);
     }
-        
+
     else {
 	    printf("Incorrect data");
     }
